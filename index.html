@@ -5,10 +5,11 @@
     <title>Enter a URL in 2020</title>
     <style>
 body {
-    background-color: black;
+    background-color: #111;
     font-family: Courier;
     text-align: center;
     color: #ffb000;
+    font-size: 12pt;
 }
 .content {
     max-width: 600px;
@@ -18,13 +19,17 @@ body {
     padding-top: 3em;
 }
 a {
+    display: inline-block;
+    background: black;
+    padding: 0.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 1em;
     color: #66ff66;
+    font-size: 20pt;
 }
 input {
-    font-size: 40pt;
-}
-p {
-    padding-top: 3em;
+    font-size: 20pt;
 }
     </style>
   </head>
@@ -41,10 +46,10 @@ p {
     <p><a href="http://10.0.2.2:8080">http://10.0.2.2:8080</a><p>
 
     <div class="custom">
+      <p><a id="url_out" href="http://custom">http://custom</a><p>
       <form id="url_form" method="get">
         <input id="url_in" type="text" placeholder="add custom url" />
       </form>
-      <p><a id="url_out" href="http://custom">http://custom</a><p>
     </div>
 
 
