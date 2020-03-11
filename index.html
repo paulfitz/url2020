@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Enter a URL in 2020</title>
+    <style>
+body {
+    background-color: black;
+    font-family: Courier;
+    text-align: center;
+    color: #ffb000;
+}
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.custom {
+    padding-top: 3em;
+}
+a {
+    color: #66ff66;
+}
+input {
+    font-size: 40pt;
+}
+p {
+    padding-top: 3em;
+}
+    </style>
+  </head>
+  <body>
+
+    <div class="content">
+
+    <h1>Hello I want to enter a URL in my browser</h1>
+
+    ... and it is 2020 so that's a struggle now.  But it is still possible to click on links in webpages so here's a webpage with a link.
+
+    <p><a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a><p>
+
+    <p><a href="http://10.0.2.2:8080">http://10.0.2.2:8080</a><p>
+
+    <div class="custom">
+      <form id="url_form" method="get">
+        <input id="url_in" type="text" placeholder="add custom url" />
+      </form>
+      <p><a id="url_out" href="http://custom">http://custom</a><p>
+    </div>
+
+
+    <script>
+      function update(e) {
+        var value = document.getElementById('url_in').value;
+        document.getElementById('url_out').href = value;
+        document.getElementById('url_out').innerHTML = value;
+        document.getElementById('url_form').action = value;
+        return false;
+      }
+      document.getElementById('url_in').addEventListener('change', update);
+      document.getElementById('url_in').addEventListener('keyup', update);
+      document.getElementById('url_in').addEventListener('paste', update);
+    </script>
+
+  </body>
+</html>
